@@ -2,10 +2,12 @@
   <% unless post == postCard[:latestpost] %>
     <%= link_to(post_path(post)) do %>
       <div class="post-card">
-        <h1><%= post.title %></h1>
-        <p><%= post.created_at.strftime("%d %b, %Y") %></p>
-        <%= image_tag post.picture.url(:normal) %>
-        <p class="blurb"><%= truncate(post.body, :length => 140) %></p>
+        <div class="card-inner">
+          <h1><%= post.title %></h1>
+          <p class="date"><%= post.created_at.strftime("%d %b, %Y") %></p>
+          <%= image_tag post.picture.url(:normal) %>
+          <p class="blurb"><%= truncate(post.body, :length => 140) %></p>
+        </div>
       </div>
     <% end %>
   <% end %>
