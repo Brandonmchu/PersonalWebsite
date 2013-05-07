@@ -1,7 +1,11 @@
 <%= @user.name %> <%= @user.email %>
 <%= link_to 'make a new post', new_post_path %>
-<ul>
+<table class="admin">
+  <th>Created on</th>
+  <th>Title</th>
+  <th>Edit</th>
+  <th>Delete</th>
 <% @posts.each do |post| %>
-<li><%= link_to post.title, post_path(post) %> <%= link_to 'edit', edit_post_path(post) %> <%= link_to 'delete', post, :method => :delete %></li>
+<tr><td><%= link_to post.created_at %></td><td><%= link_to post.title, post_path(post) %></td><td><%= link_to 'edit', edit_post_path(post) %></td><td><%= link_to 'delete', post, :method => :delete %></tr>
 <% end %>
-</ul>
+</table>

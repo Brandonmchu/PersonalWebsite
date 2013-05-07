@@ -21,7 +21,7 @@ end
 def show
   if User.find_by_id(params[:id])
     @user = User.find_by_id(params[:id])
-    @posts = Post.all
+    @posts = Post.all.sort_by { |post| post.created_at }.reverse
   else
     flash[:error] = "not a real user"
     redirect_to home_path

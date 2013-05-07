@@ -35,7 +35,7 @@ def update
 end
 
 def index
-  @posts = Post.all
+  @posts = Post.all.sort_by { |post| post.created_at }
   render :layout => 'public'
 end
 
