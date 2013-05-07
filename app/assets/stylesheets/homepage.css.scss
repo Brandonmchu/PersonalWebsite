@@ -1,17 +1,32 @@
 .content-container {
   width:1000px;
   margin:auto;
+  overflow:auto;
 }
 
 .card-container {
   margin:auto;
+  overflow:auto;
 
   .postCard {
-  width:23%;
-  height:200px;
+  width:20%;
+  height:400px;
   float:left;
-  border:1px solid black;
-  margin-right:2%;
+  margin-bottom:10px;
+  position: relative;
+
+  img {
+    margin:auto;
+    display: block;
+  }
+
+  p {
+    position:absolute;
+    bottom:1px;
+    left:1px;
+
+  }
+
   }
 }
 

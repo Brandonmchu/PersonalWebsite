@@ -1,3 +1,10 @@
-<% @posts.each do |post| %>
-<div class="postCard"><%= post.title %></div>
+<% postCard[:posts].each do |post| %>
+  <% unless post == postCard[:latestpost] %>
+  <div class="postCard">
+    <h1><%= link_to post.title, post_path(post) %></h1>
+    <%= post.created_at%>
+    <%= image_tag post.picture.url(:normal) %>
+    <p><%= truncate(post.body, :length => 140) %></p>
+  </div>
+  <% end %>
 <% end %>

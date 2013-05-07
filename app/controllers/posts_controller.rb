@@ -35,7 +35,8 @@ def update
 end
 
 def index
-  @posts = Post.all.sort_by { |post| post.created_at }
+  @posts = Post.all.sort_by { |post| post.created_at }.reverse
+  @heroPost = @posts[0]
   render :layout => 'public'
 end
 

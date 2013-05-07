@@ -1,3 +1,9 @@
 <div class="card-container">
-<%= render :partial => 'shared/postCard', :object => @posts %>
+  <div class="hero-card">
+      <h1><%= link_to @heroPost.title, post_path(@heroPost) %></h1>
+      <%= @heroPost.created_at%>
+      <%= image_tag @heroPost.picture.url(:normal) %>
+      <p><%= truncate(@heroPost.body, :length => 140) %></p>
+  </div>
+  <%= render :partial => 'shared/postCard', :object => {:posts => @posts, :latestpost => @heroPost } %>
 </div>
