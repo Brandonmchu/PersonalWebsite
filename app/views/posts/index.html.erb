@@ -1,9 +1,11 @@
-<div class="card-container">
+<%= link_to(post_path(@heroPost)) do %>
   <div class="hero-card">
-      <h1><%= link_to @heroPost.title, post_path(@heroPost) %></h1>
-      <%= @heroPost.created_at%>
-      <%= image_tag @heroPost.picture.url(:normal) %>
-      <p><%= truncate(@heroPost.body, :length => 140) %></p>
-  </div>
+    <h1><%= @heroPost.title %></h1>
+    <p><%= @heroPost.created_at.strftime("%d %b, %Y") %></p>
+    <%= image_tag @heroPost.picture.url(:normal) %>
+    <span><%= truncate(@heroPost.body, :length => 500) %></span>
+<% end %>
+</div>
+<div class="card-container">
   <%= render :partial => 'shared/postCard', :object => {:posts => @posts, :latestpost => @heroPost } %>
 </div>

@@ -1,16 +1,37 @@
 .content-container {
   width:1000px;
-  margin:auto;
+  margin:20px auto;
   overflow:auto;
 }
 
+.hero-card {
+  margin-bottom: 50px;
+  overflow: auto;
+
+  img {
+  display: block;
+  float:left;
+  }
+
+  .span {
+  display:block;
+  height:100%;
+  }
+
+  p {
+    margin-bottom: 5px;
+  }
+
+}
+
 .card-container {
-  margin:auto;
+  margin: auto;
   overflow:auto;
 
-  .postCard {
-  width:20%;
-  height:400px;
+
+
+  .post-card {
+  width:25%;
   float:left;
   margin-bottom:10px;
   position: relative;
@@ -18,13 +39,15 @@
   img {
     margin:auto;
     display: block;
+    max-width: 100%;
   }
 
   p {
-    position:absolute;
-    bottom:1px;
-    left:1px;
-
+    padding:3px;
+    margin-bottom: 5px;
+  }
+  .blurb {
+      font-size: 10px;
   }
 
   }
