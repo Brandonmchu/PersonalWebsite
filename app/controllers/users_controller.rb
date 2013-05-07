@@ -21,6 +21,7 @@ end
 def show
   if User.find_by_id(params[:id])
     @user = User.find_by_id(params[:id])
+    @posts = Post.all
   else
     flash[:error] = "not a real user"
     redirect_to home_path
