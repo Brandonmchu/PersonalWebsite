@@ -1,2 +1,5 @@
 <%= @post.title %>
-<p><%= @post.body %></p>
+
+<%= image_tag @post.picture.url(:medium) %>
+
+<p><%= @post.body.html_safe %></p>

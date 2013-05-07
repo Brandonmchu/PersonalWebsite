@@ -20,6 +20,20 @@ def show
   render :layout => 'public'
 end
 
+def edit
+  @post = Post.find_by_id(params[:id])
+end
+
+def update
+  @post = Post.find_by_id(params[:id])
+  if @post.update_attributes(params[:post])
+    flash[:success] = "Account settings updated"
+    redirect_to current_user
+  else
+    render 'edit'
+  end
+end
+
 def index
   @posts = Post.all
   render :layout => 'public'

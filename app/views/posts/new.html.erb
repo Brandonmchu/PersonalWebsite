@@ -8,8 +8,9 @@
 
     <%= f.text_field :title %>
     <%= f.label :body %>
-    <%= f.text_field :body, value: " ", class: "post-input-field"  %>
+    <%= f.text_area :body, value: " ", class: "post-input-field"  %>
 
+    <%= f.file_field :picture %>
     <br>
     <%= f.submit "Submit Post", class: "btn btn-large btn-success" %>
   <% end %>

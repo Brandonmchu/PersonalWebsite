@@ -1,11 +1,10 @@
 BCapp::Application.routes.draw do
-  resources :users
+  resources :users, only: [:show, :index]
   resources :posts
   resources :sessions, only: [:new, :create, :destroy]
 
   root :to => 'posts#index'
 
-  match '/signup', to: 'users#new'
   match '/signin', to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
   match '/admin', to: 'static_pages#home'
