@@ -9,6 +9,7 @@ body {
   overflow:auto;
   background-image: url('hero_bkgrnd.jpg');
   height:400px;
+  background-size:100%;
 
   .hero-inner {
     width:$container-width;

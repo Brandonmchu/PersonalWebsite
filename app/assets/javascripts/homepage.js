@@ -8,6 +8,11 @@ $(document).ready(function(){
     });
   });
 
+  //background-zoom
+  $('.hero-container').animate({
+    'background-size': "200%"
+  }, 100000, 'linear');
+
   //hoverstate
   $('.post-card').mouseenter(function(){
     jQuery(this).find(".overlay").css("opacity","0.2");
