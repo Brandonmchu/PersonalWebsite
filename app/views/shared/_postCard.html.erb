@@ -1,14 +1,22 @@
 <% postCard[:posts].each do |post| %>
-  <% unless post == postCard[:latestpost] %>
+
     <%= link_to(post_path(post)) do %>
       <div class="post-card">
-        <div class="card-inner">
-          <h1><%= post.title %></h1>
+        <div class="overlay">
+
+        </div>
+        <div class="card-title">
+
+          <%= post.title.html_safe %>
           <p class="date"><%= post.created_at.strftime("%d %b, %Y") %></p>
-          <%= image_tag post.picture.url(:normal) %>
-          <p class="blurb"><%= truncate(post.body, :length => 140) %></p>
+        </div>
+
+        <%= image_tag post.picture.url(:normal) %>
+
+    <% end %>
+        <div class="card-inner">
+          <p class="blurb"><%= truncate(post.body, :length => 340).html_safe %></p>
         </div>
       </div>
-    <% end %>
-  <% end %>
+
 <% end %>

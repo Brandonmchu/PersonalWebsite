@@ -1,5 +1,7 @@
-<%= @post.title %>
-
-<%= image_tag @post.picture.url(:medium) %>
-
-<p><%= @post.body.html_safe %></p>
+<div id="post-container">
+  <div class="post-inner">
+    <%= @post.title.html_safe %>
+    <%= image_tag @post.picture.url(:medium) %>
+    <p><%= @post.body.html_safe %></p>
+  </div>
+</div>

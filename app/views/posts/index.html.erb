@@ -1,17 +1,17 @@
 <div class="hero-container">
-</div>
-<%= link_to(post_path(@heroPost)) do %>
-  <div class="hero-card">
-    <div class="hero-card-inner">
-      <p class="latest-posts">Latest Post</p>
-      <h1><%= @heroPost.title %></h1>
-      <p class="date"><%= @heroPost.created_at.strftime("%d %b, %Y") %></p>
-      <%= image_tag @heroPost.picture.url(:normal) %>
-      <span><%= truncate(@heroPost.body, :length => 500) %></span>
+  <div class="hero-inner">
+    <div class="hero-naut">
+    <%= image_tag("AstronautSmall.png") %>
+    </div>
+    <div class="hero-copy">
+      <h1>This is probably overkill for a blog.</h1>
     </div>
   </div>
-<% end %>
-<p class="older-posts">older posts</p>
+</div>
+
 <div class="card-container">
   <%= render :partial => 'shared/postCard', :object => {:posts => @posts, :latestpost => @heroPost } %>
 </div>
+  <% if signed_in? %>
+  <%= link_to 'admin', current_user %>
+  <% end %>

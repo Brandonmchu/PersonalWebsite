@@ -1,5 +1,38 @@
+$container-width: 1000px;
+
 #header-container{
   height:90px;
   width:100%;
   background-color: #FFF;
+
+  .header-inner {
+    width:$container-width;
+    margin:auto;
+    height:100%;
+
+    .header-inner-left {
+      width:50%;
+      position:relative;
+
+
+      .headshot {
+        width:15%;
+        background-image: url('brandonHeadshot.png');
+        background-size: 90%;
+        height:70px;
+        border-radius: 45px;
+        float:left;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      h2 {
+        margin-left: 10px;
+        margin-top: 29px;
+        float:left;
+        color:#555;
+
+      }
+    }
+  }
 }
