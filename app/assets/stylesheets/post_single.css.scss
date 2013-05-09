@@ -2,10 +2,78 @@
   width:1000px;
   margin:auto;
   padding-top: 90px;
+  min-height: 100%;
+
 
 .post-inner {
   padding-top: 20px;
   padding-bottom: 20px;
+  position: relative;
+
+  .post-picture{
+    height:400px;
+    overflow:hidden;
+  }
+
+  img {
+    width:100%;
+  }
+
+  .post-overlay {
+    background-color: #000;
+    height: 400px;
+    width:100%;
+    opacity: 0.5;
+    position: absolute;
+    top:20px;
+    left:0px;
+
+    .post-date {
+      position: absolute;
+      right:20px;
+      top:360px;
+      color:#FFF;
+    }
+  }
+
+  .post-overlay-quote {
+    background-color: #000;
+    width:100%;
+    height:750px;
+    opacity: 0.5;
+    position: absolute;
+    top:20px;
+    left:0px;
+
+    .post-date {
+      position: absolute;
+      right:20px;
+      bottom:20px;
+      color:#FFF;
+    }
+  }
+
+  .post-title {
+    position: absolute;
+    top:50px;
+    left:50px;
+    right:50px;
+    color:#FFF;
+    text-transform: uppercase;
+    font-weight:700;
+    font-size: 30px;
+
+  }
+
+
+
+  .post-body {
+    background-color: #FFF;
+    height:100%;
+  }
+
+
+
 }
 
 }

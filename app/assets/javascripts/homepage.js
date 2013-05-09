@@ -13,53 +13,55 @@ $(document).ready(function(){
   //   'background-size': "200%"
   // }, 100000, 'linear');
 
+  $PostCard = $('.post-card')
   //hoverstate
-  $('.post-card').mouseenter(function(){
-    jQuery(this).find(".overlay").css("opacity","0.2");
-    jQuery(this).find("h1").css("text-shadow","-1px 0 1px #333, 0 1px 1px #333, 1px 0 1px #333, 0 -1px 1px #333");
-    jQuery(this).find("h2").css("text-shadow","-1px 0 1px #333, 0 1px 1px #333, 1px 0 1px #333, 0 -1px 1px #333");
+  $PostCard.mouseenter(function(){
+    $(this).find(".overlay").css("opacity","0.2");
+    $(this).find("h1").css("text-shadow","-1px 0 1px #333, 0 1px 1px #333, 1px 0 1px #333, 0 -1px 1px #333");
+    $(this).find("h2").css("text-shadow","-1px 0 1px #333, 0 1px 1px #333, 1px 0 1px #333, 0 -1px 1px #333");
   });
 
   $('.post-card').mouseleave(function(){
-    jQuery(this).find(".overlay").css("opacity","0.6");
-    jQuery(this).find("h1").css("text-shadow","none");
-    jQuery(this).find("h2").css("text-shadow","none");
+    $(this).find(".overlay").css("opacity","0.6");
+    $(this).find("h1").css("text-shadow","none");
+    $(this).find("h2").css("text-shadow","none");
   });
 
 
+  $heroImage = $('.hero-inner img');
 
   //spaceman
   function voyage(){
-    $('.hero-inner img').animate({
-    top: '+=100',
+    $heroImage.animate({
+    top: '+=60',
     left: '+=80'
     }, 10000,'linear', function(){
         $(this).animate({
-        top: '-=100',
+        top: '-=60',
         left: '+=180'
       }, 12000,'linear', function(){
           $(this).animate({
-          top: '-=100',
-          left: '-=90'
-        }, 8000,'linear', returnVoyage());
+          top: '+=60',
+          left: '+=90'
+        }, 8000,'linear', returnVoyage);
       });
     });
 
   }
 
   function returnVoyage(){
-    $('.hero-inner img').animate({
-    top: '+=100',
-    left: '+=90'
+    $heroImage.animate({
+    top: '-=60',
+    left: '-=90'
     }, 10000,'linear', function(){
       $(this).animate({
-      top: '+=100',
+      top: '+=60',
       left: '-=180'
       }, 12000,'linear', function(){
         $(this).animate({
-        top: '-=100',
+        top: '-=60',
         left: '-=80'
-        }, 8000,'linear',voyage());
+        }, 8000,'linear',voyage);
       });
     });
   }

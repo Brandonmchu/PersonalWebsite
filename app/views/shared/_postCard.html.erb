@@ -14,10 +14,13 @@
         <%= image_tag post.picture.url(:normal) %>
 
     <% end %>
+
         <div class="card-inner">
+          <div class="card-background">
           <% if post.body.length > 1 %>
             <%= truncate(post.body, :length => 340).html_safe %>
           <% end %>
+          </div>
         </div>
       </div>
 

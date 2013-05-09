@@ -1,7 +1,32 @@
+<% javascript 'posts' %>
 <div id="post-container">
   <div class="post-inner">
-    <%= @post.title.html_safe %>
+
+    <% if @post.body.length > 1 %>
+    <div class="post-picture">
+      <%= image_tag @post.picture.url(:large) %>
+    </div>
+    <div class="post-overlay">
+      <div class="post-date">
+        <%= @post.created_at.strftime("%d %b, %Y") %>
+      </div>
+    </div>
+
+    <% else %>
     <%= image_tag @post.picture.url(:large) %>
-    <p><%= @post.body.html_safe %></p>
+    <div class="post-overlay-quote">
+      <div class="post-date">
+        <%= @post.created_at.strftime("%d %b, %Y") %>
+      </div>
+    </div>
+    <% end %>
+
+    <div class="post-title">
+      <%= @post.title.html_safe %>
+    </div>
+
+    <div class="post-body">
+      <%= @post.body.html_safe %>
+    </div>
   </div>
 </div>
