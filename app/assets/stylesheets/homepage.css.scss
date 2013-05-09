@@ -2,11 +2,12 @@ $container-width: 1000px;
 
 body {
   background-color: #FFF;
+
 }
 
 .hero-container {
+  padding-top: 90px;
   margin:0px auto 20px;
-  overflow:auto;
   background-image: url('hero_bkgrnd.jpg');
   height:400px;
   background-size:100%;
@@ -23,6 +24,7 @@ body {
         position:absolute;
         top:0px;
         left:0px;
+
       }
     }
 
@@ -64,19 +66,19 @@ body {
   padding:20px 0;
 
   .post-card {
-  width:32%;
+  width:31%;
   float:left;
   // margin-bottom: 30px;
   position: relative;
-  margin-left:0.25%;
-  margin-right:0.25%;
-  border-radius: 4px;
-  background-color: #EEE;
+  margin-left:1%;
+  margin-right:1%;
+  background-color: #2B3856;
+  margin-bottom: 20px;
 
   .overlay {
     background-color: rgb(0,0,0);
     opacity: 0.6;
-    height:240px;
+    height:232px;
     width:100%;
     position: absolute;
   }
@@ -104,6 +106,7 @@ body {
       left:0;
       padding:20px 30px 0 30px;
       color:#FFF;
+      font-size: 20px;
     }
 
     h3 {
@@ -124,19 +127,16 @@ body {
 
 
   .card-inner {
-    padding:10px;
 
       p {
-      padding:3px;
-      margin-bottom: 5px;
-      font-size: 15px;
-      color:#333;
+      padding:10px 10px;
+      font-size: 12px;
+      line-height: 20px;
+      color:#FFF;
+      font-family: 'Orienta', sans-serif;
     }
 
   }
-
-
-
 
 
   }

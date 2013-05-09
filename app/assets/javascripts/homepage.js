@@ -9,9 +9,9 @@ $(document).ready(function(){
   });
 
   //background-zoom
-  $('.hero-container').animate({
-    'background-size': "200%"
-  }, 100000, 'linear');
+  // $('.hero-container').animate({
+  //   'background-size': "200%"
+  // }, 100000, 'linear');
 
   //hoverstate
   $('.post-card').mouseenter(function(){
@@ -25,6 +25,8 @@ $(document).ready(function(){
     jQuery(this).find("h1").css("text-shadow","none");
     jQuery(this).find("h2").css("text-shadow","none");
   });
+
+
 
   //spaceman
   function voyage(){
