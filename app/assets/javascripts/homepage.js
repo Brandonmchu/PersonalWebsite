@@ -39,11 +39,11 @@ $(document).ready(function(){
         $(this).animate({
         top: '-=210',
         left: '+=190'
-      }, 12000,'linear', function(){
+      }, 12000,'easeOutQuint', function(){
           $(this).animate({
           top: '+=210',
           left: '+=90'
-        }, 8000,'linear', returnVoyage);
+        }, 8000,'easeOutElastic', returnVoyage);
       });
     });
 
@@ -53,11 +53,11 @@ $(document).ready(function(){
     $heroImage.animate({
     top: '-=210',
     left: '-=90'
-    }, 10000,'linear', function(){
+    }, 10000,'easeInOutExpo', function(){
       $(this).animate({
       top: '+=210',
       left: '-=190'
-      }, 12000,'linear', function(){
+      }, 12000,'easeInCirc', function(){
         $(this).animate({
         top: '-=210',
         left: '-=150'

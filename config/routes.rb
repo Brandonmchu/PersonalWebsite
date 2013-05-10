@@ -8,6 +8,7 @@ BCapp::Application.routes.draw do
   match '/signin', to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
   match '/admin', to: 'static_pages#home'
+  match '/about', to: 'static_pages#about'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
