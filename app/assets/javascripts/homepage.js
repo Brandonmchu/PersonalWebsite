@@ -33,15 +33,15 @@ $(document).ready(function(){
   //spaceman
   function voyage(){
     $heroImage.animate({
-    top: '+=60',
-    left: '+=80'
+    top: '+=210',
+    left: '+=150'
     }, 10000,'linear', function(){
         $(this).animate({
-        top: '-=60',
-        left: '+=180'
+        top: '-=210',
+        left: '+=190'
       }, 12000,'linear', function(){
           $(this).animate({
-          top: '+=60',
+          top: '+=210',
           left: '+=90'
         }, 8000,'linear', returnVoyage);
       });
@@ -51,16 +51,16 @@ $(document).ready(function(){
 
   function returnVoyage(){
     $heroImage.animate({
-    top: '-=60',
+    top: '-=210',
     left: '-=90'
     }, 10000,'linear', function(){
       $(this).animate({
-      top: '+=60',
-      left: '-=180'
+      top: '+=210',
+      left: '-=190'
       }, 12000,'linear', function(){
         $(this).animate({
-        top: '-=60',
-        left: '-=80'
+        top: '-=210',
+        left: '-=150'
         }, 8000,'linear',voyage);
       });
     });

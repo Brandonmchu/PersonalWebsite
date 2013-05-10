@@ -74,6 +74,23 @@ body {
   box-shadow: 0px 0px 0px 1px #999;
   margin-bottom: 20px;
 
+    .date {
+      font-size:15px;
+      line-height: 15px;
+      position: absolute;
+      top:210px;
+      right:10px;
+      color:#FFF;
+    }
+
+    .date-quote {
+      font-size:15px;
+      position: absolute;
+      bottom:5px;
+      right:10px;
+      color:#FFF;
+    }
+
     .card-background {
       background-color: #FFF;
       height:100%;
@@ -138,15 +155,14 @@ body {
         font-size: 12px;
         line-height: 20px;
         color:#2B3856;
-        font-family: 'Orienta', sans-serif;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       }
 
     }
 
 
     }
+
   }
 
-  .date {
-      font-size:15px;
-    }
+

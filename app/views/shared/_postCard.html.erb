@@ -8,11 +8,15 @@
         <div class="card-title">
 
           <%= post.title.html_safe %>
-          <p class="date"><%= post.created_at.strftime("%d %b, %Y") %></p>
+
         </div>
 
         <%= image_tag post.picture.url(:normal) %>
-
+        <% if post.body.length > 1 %>
+          <div class="date"><%= post.created_at.strftime("%d %b, %Y") %></div>
+        <% else %>
+          <div class="date-quote"><%= post.created_at.strftime("%d %b, %Y") %></div>
+        <% end %>
     <% end %>
 
         <div class="card-inner">

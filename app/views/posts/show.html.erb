@@ -13,7 +13,9 @@
     </div>
 
     <% else %>
-    <%= image_tag @post.picture.url(:large) %>
+    <div class="post-picture-quote">
+      <%= image_tag @post.picture.url(:large) %>
+    </div>
     <div class="post-overlay-quote">
       <div class="post-date">
         <%= @post.created_at.strftime("%d %b, %Y") %>
