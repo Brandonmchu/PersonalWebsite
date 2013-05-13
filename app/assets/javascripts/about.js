@@ -97,6 +97,6 @@ $(document).ready(function(){
   function bTypeWheel(){
     $('.info-inner-one p').
 
-  }
+  };
 });
 // "'+(viewportHeight-60)/2+'px"
