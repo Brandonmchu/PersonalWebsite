@@ -7,8 +7,8 @@ $(document).ready(function(){
 
   var qw = $('.quarter').width();
   var whoInnerHeight = $('.who-inner').height();
-  $('.quarter').css({'height':qw+'px'});
-  $('.info').css({'height':qw+'px'});
+  $('.quarter').css({'height':(qw)+'px'});
+  $('.info').css({'height':(qw)+'px'});
 
   $("h1").css("padding-top", (viewportHeight-200)/2+'px');
   $(".who h1").css("padding-top", (viewportHeight-(200+whoInnerHeight))/2+'px');
@@ -65,7 +65,7 @@ $(document).ready(function(){
   //expand who-section
 
   function expandSilo(elem){
-    var height = 200
+    var height = 200;
     if ($(elem).css('height') > '0px')
     $(elem).animate({
       height: '0px',
@@ -80,23 +80,54 @@ $(document).ready(function(){
 
   $('#pm').click(function(){
     expandSilo('.silo-inner-pm');
-  })
+  });
 
   $('#fin').click(function(){
     expandSilo('.silo-inner-fin');
-  })
+  });
 
   $('#code').click(function(){
     expandSilo('.silo-inner-code');
-  })
+  });
 
   $('#space').click(function(){
     expandSilo('.silo-inner-space');
-  })
+  });
 
-  function bTypeWheel(){
-    $('.info-inner-one p').
+  //wheel
 
-  };
+  function show(one,two){
+      $(one).fadeIn().css({
+        "background":"#2B3856",
+        });
+      $(two).fadeIn().css("display","block");
+
+  }
+
+  function showTwo(one,two){
+      $(one).fadeIn().css({
+        "background":"#333",
+        });
+      $(two).fadeIn().css("display","block");
+
+  }
+
+  function wheelStart(){
+
+    setTimeout(function(){show('.one','.info-inner-one p')}, 1000);
+    setTimeout(function(){showTwo('.two','.info-inner-two p')}, 3000);
+    setTimeout(function(){show('.four','.info-inner-four p')}, 5000);
+    setTimeout(function(){showTwo('.three','.info-inner-three p')}, 7000);
+
+  }
+
+  $(document).scroll(function(){
+    if($(this).scrollTop()>=$('.b-type').position().top){
+        wheelStart();
+    }
+  });
+
+
+
 });
 // "'+(viewportHeight-60)/2+'px"

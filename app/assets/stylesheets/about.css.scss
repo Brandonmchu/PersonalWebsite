@@ -37,6 +37,7 @@ h1, h2, h3, h4, h5, h6, p {
     font-size: 60px;
     padding-top: 0px;
     line-height:60px;
+    color:$gray;
   }
 
   .icon-chevron-sign-down:hover{
@@ -44,7 +45,7 @@ h1, h2, h3, h4, h5, h6, p {
   }
 
   .icon-chevron-sign-up:hover{
-    color:$blue;
+    color:$yellow;
   }
   .hero-banner {
     text-align: center;
@@ -87,6 +88,7 @@ h1, h2, h3, h4, h5, h6, p {
 
     h1{
       margin-bottom: 50px;
+      color:#FFF;
     }
 
     .who-silo{
@@ -170,7 +172,7 @@ h1, h2, h3, h4, h5, h6, p {
   .b-type {
     text-align: center;
     height:100%;
-    background-color: $yellow;
+    background-color: #FFF;
     position: relative;
     color:$blue;
 
@@ -182,6 +184,10 @@ h1, h2, h3, h4, h5, h6, p {
       width:90%;
       margin:auto;
       overflow: auto;
+
+      p{
+        color:#FFF;
+      }
 
 
 
@@ -257,12 +263,12 @@ h1, h2, h3, h4, h5, h6, p {
         }
       }
 
-      .one:hover,.two:hover,.three:hover,.four:hover{
-        background: #FFF;
-      }
+      // .one:hover,.two:hover,.three:hover,.four:hover{
+      //   background: #FFF;
+      // }
 
       .one {
-        background: $blue;
+        background: #FFF;
         border-radius: $circle-height 0 0 0;
         -moz-border-radius: $circle-height 0 0 0;
         -webkit-border-radius: $circle-height 0 0 0;
@@ -277,7 +283,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 
       .two{
-        background: $blue;
+        background: #FFF;
         border-radius: 0 $circle-height 0 0;
         -moz-border-radius: 0 $circle-height 0 0;
         -webkit-border-radius: 0 $circle-height 0 0;
@@ -292,7 +298,7 @@ h1, h2, h3, h4, h5, h6, p {
       }
 
       .three{
-        background: $blue;
+        background: #FFF;
         border-radius:  0 0 0 $circle-height;
         -moz-border-radius: 0 0 0 $circle-height;
         -webkit-border-radius:  0 0 0 $circle-height;
@@ -306,7 +312,7 @@ h1, h2, h3, h4, h5, h6, p {
       }
 
       .four{
-        background: $blue;
+        background: #FFF;
         border-radius: 0 0 $circle-height 0;
         -moz-border-radius: 0 0 $circle-height 0;
         -webkit-border-radius: 0 0 $circle-height 0;
@@ -322,6 +328,11 @@ h1, h2, h3, h4, h5, h6, p {
     .icon-chevron-sign-down{
       position: absolute;
       bottom:30px;
+      color:$gray;
+    }
+
+    .icon-chevron-sign-down:hover{
+      color:$blue;
     }
 
     span {
@@ -332,11 +343,26 @@ h1, h2, h3, h4, h5, h6, p {
     text-align: center;
     height:100%;
     position: relative;
+    background-color: $blue;
+    color:#FFF;
+
+    h1{
+      color:#FFF;
+    }
+
+    .link-contact{
+      color:$yellow;
+    }
 
 
     .icon-chevron-sign-up{
       position: absolute;
       bottom: 30px;
+      color:#FFF;
+    }
+
+    .icon-chevron-sign-up:hover{
+      color:$yellow;
     }
 
 
