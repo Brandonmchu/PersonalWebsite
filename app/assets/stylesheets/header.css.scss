@@ -1,7 +1,7 @@
 $container-width: 1000px;
 
 #header-container{
-  height:90px;
+  height:50px;
   width:100%;
   background-color: #FFF;
   opacity: 1;
@@ -21,10 +21,10 @@ $container-width: 1000px;
 
 
       .headshot {
-        width:14%;
+        width:7%;
         background-image: url('brandonHeadshot.png');
         background-size: 100%;
-        height:70px;
+        height:35px;
         border-radius: 45px;
         float:left;
         margin-top: 9px;
@@ -33,10 +33,10 @@ $container-width: 1000px;
 
       h2 {
         margin-left: 10px;
-        margin-top: 29px;
+        margin-top: 14px;
+        font-size: 18px;
         float:left;
         color:#555;
-
       }
     }
     .header-inner-right {
@@ -44,20 +44,22 @@ $container-width: 1000px;
       float:right;
       height:100%;
 
+
       a {
 
         .header-menu {
           width:33%;
           float:right;
           text-align: center;
-          border-left: 1px solid #999;
+          border-left: 1px solid #DDD;
           height:100%;
           color:#555;
 
 
 
           h2{
-            margin-top: 29px;
+            margin-top: 14px;
+            font-size: 18px;
           }
 
         }
@@ -76,7 +78,7 @@ $container-width: 1000px;
 
       a:first-child {
         .header-menu{
-          border-right: 1px solid #999;
+          border-right: 1px solid #DDD;
         }
       }
     }

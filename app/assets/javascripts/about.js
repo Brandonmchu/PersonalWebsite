@@ -114,10 +114,10 @@ $(document).ready(function(){
 
   function wheelStart(){
 
-    setTimeout(function(){show('.one','.info-inner-one p')}, 1000);
-    setTimeout(function(){showTwo('.two','.info-inner-two p')}, 3000);
-    setTimeout(function(){show('.four','.info-inner-four p')}, 5000);
-    setTimeout(function(){showTwo('.three','.info-inner-three p')}, 7000);
+    setTimeout(function(){show('.one','.info-inner-one p')}, 500);
+    setTimeout(function(){showTwo('.two','.info-inner-two p')}, 1500);
+    setTimeout(function(){show('.four','.info-inner-four p')}, 2500);
+    setTimeout(function(){showTwo('.three','.info-inner-three p')}, 3500);
 
   }
 

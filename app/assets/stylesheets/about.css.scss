@@ -69,6 +69,10 @@ h1, h2, h3, h4, h5, h6, p {
     color:#FFF;
     position: relative;
 
+    .icon-arrow-down {
+      color:$yellow;
+    }
+
     .who-inner {
       width:90%;
       margin:auto;
