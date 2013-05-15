@@ -1,5 +1,5 @@
 BCapp::Application.routes.draw do
-  resources :users, only: [:show, :index]
+  resources :users, only: [:show, :index, :new]
   resources :posts
   resources :sessions, only: [:new, :create, :destroy]
 
