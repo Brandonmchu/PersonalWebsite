@@ -1,1 +1,0 @@
-$(document).ready(function(){function a(){$bannerImg.animate({width:"+=300"},2e5,"easeOutBack"),$bannerImg.promise().done(b)}function b(){$bannerImg.animate({width:"-=300"},2e5,"easeInOutQuad"),$bannerImg.promise().done(a)}$bannerImg=$("img"),a()});
