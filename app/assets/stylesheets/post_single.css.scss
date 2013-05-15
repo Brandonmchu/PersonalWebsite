@@ -80,7 +80,12 @@
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 18px;
     color: rgb(76,76,76);
-    line-height: 25px;
+    line-height: 29px;
+
+    .post-body-inner{
+      width:92%;
+      margin: auto;
+    }
   }
 
 
