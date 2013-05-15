@@ -57,5 +57,6 @@ production:
   database: blog_prod
   pool: 5
   timeout: 5000
+  host: ec2-50-16-127-64.compute-1.amazonaws.com
   username: brandonchu
   password: password
