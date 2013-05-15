@@ -21,7 +21,7 @@ $(document).ready(function(){
     $(this).find("h2").css("text-shadow","-1px 0 1px #333, 0 1px 1px #333, 1px 0 1px #333, 0 -1px 1px #333");
   });
 
-  $('.post-card').mouseleave(function(){
+  $PostCard.mouseleave(function(){
     $(this).find(".overlay").css("opacity","0.6");
     $(this).find("h1").css("text-shadow","none");
     $(this).find("h2").css("text-shadow","none");

@@ -4,8 +4,9 @@
       <%= link_to root_path do %>
       <div class="headshot">
       </div>
+      <h2>Things that make me go hmm...</h2>
       <% end %>
-      <h2>Brandon Chu</h2>
+
     </div>
     <div class="header-inner-right">
       <%= link_to about_path do %>
@@ -18,7 +19,7 @@
         </div>
       <% end %>
       <%= link_to root_path do %>
-        <% if controller?("posts") && action?("index") %>
+        <% if controller?("posts") && action?("index","show") %>
           <div class="header-menu current">
         <% else %>
           <div class="header-menu">
