@@ -16,9 +16,8 @@ development:
   adapter: postgresql
   encoding: unicode
   database: blog_dev
-  pool: 5
-  timeout: 5000
   host: localhost
+  pool: 5
   username: brandonchu
   password: password
 
@@ -44,19 +43,8 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: blog_test
-  pool: 5
-  timeout: 5000
+  database: blog_dev
   host: localhost
-  username: brandonchu
-  password: password
-
-production:
-  adapter: postgresql
-  encoding: unicode
-  database: blog_prod
   pool: 5
-  timeout: 5000
-  host: ec2-50-16-127-64.compute-1.amazonaws.com
   username: brandonchu
   password: password
