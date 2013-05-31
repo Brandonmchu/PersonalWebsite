@@ -1,31 +1,35 @@
 <% postCard[:posts].each do |post| %>
+    <% unless post == postCard[:latestpost] %>
+      <%= link_to(post_path(post)) do %>
+        <div class="post-card">
+          <div class="overlay">
 
-    <%= link_to(post_path(post)) do %>
-      <div class="post-card">
-        <div class="overlay">
-
-        </div>
-        <div class="card-title">
-
-          <%= post.title.html_safe %>
-
-        </div>
-
-        <%= image_tag post.picture.url(:normal) %>
-        <% if post.body.length > 1 %>
-          <div class="date"><%= post.created_at.strftime("%d %b, %Y") %></div>
-        <% else %>
-          <div class="date-quote"><%= post.created_at.strftime("%d %b, %Y") %></div>
-        <% end %>
-    <% end %>
-
-        <div class="card-inner">
-          <% if post.body.length > 1 %>
-          <div class="card-background">
-            <%= truncate(post.body, :length => 340).html_safe %>
           </div>
-          <% end %>
-        </div>
-      </div>
+          <div class="card-title">
 
+            <%= post.title.html_safe %>
+
+          </div>
+
+          <%= image_tag post.picture.url(:normal) %>
+          <% if post.body.length > 1 %>
+            <div class="date"><%= post.created_at.strftime("%d %b, %Y") %></div>
+          <% else %>
+            <div class="date"><%= post.created_at.strftime("%d %b, %Y") %></div>
+          <% end %>
+      <% end %>
+
+          <div class="card-inner">
+            <% if post.body.length > 1 %>
+            <div class="card-background">
+              <%= truncate(post.body, :length => 340).html_safe %>
+            </div>
+            <% else %>
+            <div class="card-background-cardquote">
+             <span class="cardquote">Bad-ass Quote</span>
+            </div>
+            <% end %>
+          </div>
+        </div>
+    <% end %>
 <% end %>

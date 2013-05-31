@@ -1,16 +1,36 @@
 <% javascript 'homepage' %>
-<div class="hero-container">
-  <div class="hero-inner">
-    <div class="hero-naut">
-    <%= image_tag("AstronautSmall.png") %>
+<div class="hero-post-container">
+  <h1>Latest Post</h1>
+  <%= link_to(post_path(@heroPost)) do %>
+  <div class="hero-post">
+    <div class="hero-post-left">
+      <div class="hero-post-left-inner">
+        <h2><%= @heroPost.title.html_safe %></h2>
+        <br>
+        <%= @heroPost.created_at.strftime("%d %b, %Y") %>
+
+      </div>
     </div>
-    <div class="hero-copy">
-      <h1>This is probably overkill for a blog</h1>
+    <div class="hero-post-right">
+      <%= image_tag @heroPost.picture.url(:normal) %>
     </div>
   </div>
-</div>
-
+  <% end %>
+  <% if @heroPost.body.length > 1 %>
+    <div class="post-body">
+      <div class="post-body-inner">
+        <%= truncate(@heroPost.body, :length => 1000) %>
+      </div>
+    </div>
+  <% else %>
+    <div class="post-body-quote">
+      Bad-ass Quote
+    </div>
+  <% end %>
+  <h1>Older Posts</h1>
+  </div>
 <div class="card-container">
+
   <%= render :partial => 'shared/postCard', :object => {:posts => @posts, :latestpost => @heroPost } %>
 </div>
   <% if signed_in? %>

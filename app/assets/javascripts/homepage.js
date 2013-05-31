@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+
   var $container = $('.card-container');
 
   $container.imagesLoaded( function(){
@@ -8,12 +9,7 @@ $(document).ready(function(){
     });
   });
 
-  //background-zoom
-  // $('.hero-container').animate({
-  //   'background-size': "200%"
-  // }, 100000, 'linear');
-
-  $PostCard = $('.post-card')
+  $PostCard = $('.post-card');
   //hoverstate
   $PostCard.mouseenter(function(){
     $(this).find(".overlay").css("opacity","0.2");
@@ -28,44 +24,9 @@ $(document).ready(function(){
   });
 
 
-  $heroImage = $('.hero-inner img');
+  var heroheight = $('.hero-post-left').height();
+  console.log(heroheight);
+  $('.hero-post-right img').css({'height':(heroheight)+'px'});
 
-  //spaceman
-  function voyage(){
-    $heroImage.animate({
-    top: '+=210',
-    left: '+=150'
-    }, 10000,'linear', function(){
-        $(this).animate({
-        top: '-=210',
-        left: '+=190'
-      }, 12000,'easeOutQuint', function(){
-          $(this).animate({
-          top: '+=210',
-          left: '+=90'
-        }, 8000,'easeOutElastic', returnVoyage);
-      });
-    });
-
-  }
-
-  function returnVoyage(){
-    $heroImage.animate({
-    top: '-=210',
-    left: '-=90'
-    }, 10000,'easeInOutExpo', function(){
-      $(this).animate({
-      top: '+=210',
-      left: '-=190'
-      }, 12000,'easeInCirc', function(){
-        $(this).animate({
-        top: '-=210',
-        left: '-=150'
-        }, 8000,'linear',voyage);
-      });
-    });
-  }
-  voyage();
-  //end spaceman
 });
 

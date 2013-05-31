@@ -45,11 +45,104 @@ body {
       font-size: 60px;
       font-weight: 700;
       text-shadow: 1px;
+
       }
     }
   }
 }
 
+.hero-post-container {
+
+  padding-top: 60px;
+  width:$container-width;
+  margin:auto;
+
+  h1{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-size: 60px;
+    color:$blue;
+  }
+  .hero-post{
+
+  overflow: auto;
+      .hero-post-left {
+        width:60%;
+        float:left;
+        min-height: 350px;
+        // background-color:rgb(240,240,240);
+        background-color:$gray;
+        border-top-left-radius:10px;
+
+        -moz-border-radius-topright:10px;
+
+
+        .hero-post-left-inner{
+          padding: 20px;
+          color:#FFF;
+          h2{
+            color:#FFF;
+            font-size: 40px;
+          }
+
+        }
+      }
+
+      .hero-post-right{
+        width:40%;
+        float:right;
+
+
+        img{
+          float:right;
+          width:100%;
+          border-top-right-radius:10px;
+
+          -moz-border-radius-topright:10px;
+
+        }
+      }
+
+  }
+
+  .post-body {
+    background-color: rgb(240,240,240);
+    height:100%;
+    padding:30px 20px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    color: rgb(76,76,76);
+    line-height: 29px;
+    border-bottom-right-radius:10px;
+    -moz-border-radius-bottomright:10px;
+    border-bottom-left-radius:10px;
+    -moz-border-radius-bottomleft:10px;
+
+    .post-body-inner{
+      width:92%;
+      margin: auto;
+
+      .post-body-inner-quote{
+        text-align: center;
+      }
+    }
+  }
+  .post-body-quote {
+    background-color: rgb(240,240,240);
+    height:100%;
+    padding:20px 20px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    color: rgb(76,76,76);
+    line-height: 29px;
+    border-bottom-right-radius:10px;
+    -moz-border-radius-bottomright:10px;
+    border-bottom-left-radius:10px;
+    -moz-border-radius-bottomleft:10px;
+    text-align: center;
+  }
+
+}
 
 
 .latest-posts {
@@ -76,7 +169,7 @@ body {
   margin-left:1%;
   margin-right:1%;
   margin-bottom: 20px;
-  background-color:rgb(252,252,252);
+  background-color:rgb(240,240,240);
   border-radius: 10px;
 
     .date {
@@ -158,12 +251,25 @@ body {
       .card-background {
         padding:20px 20px;
 
+
+
+      }
+
+      .card-background-cardquote {
+        text-align: center;
+        padding:10px 20px;
+        font-size: 15px;
+        line-height: 22px;
+        color: rgb(76,76,76);
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+
       }
         p {
 
         font-size: 15px;
         line-height: 22px;
-        color:#2B3856;
+        color: rgb(76,76,76);
         font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       }
 
