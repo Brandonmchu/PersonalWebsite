@@ -1,11 +1,12 @@
 <% javascript 'homepage' %>
+<div id="homepagecontainer">
 <div class="hero-post-container">
   <h1>Latest Post</h1>
   <%= link_to(post_path(@heroPost)) do %>
   <div class="hero-post">
     <div class="hero-post-left">
       <div class="hero-post-left-inner">
-        <h2><%= @heroPost.title.html_safe %></h2>
+        <%= @heroPost.title.html_safe %>
         <br>
         <%= @heroPost.created_at.strftime("%d %b, %Y") %>
 
@@ -19,7 +20,7 @@
   <% if @heroPost.body.length > 1 %>
     <div class="post-body">
       <div class="post-body-inner">
-        <%= truncate(@heroPost.body, :length => 1000) %>
+        <%= truncate(@heroPost.body, :length => 1000).html_safe %>
       </div>
     </div>
   <% else %>
@@ -36,3 +37,4 @@
   <% if signed_in? %>
   <%= link_to 'admin', current_user %>
   <% end %>
+</div>

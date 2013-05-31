@@ -13,15 +13,18 @@
   .post-picture{
     height:400px;
     overflow:hidden;
+    border-radius: 10px;
   }
 
   .post-picture-quote{
     height:750px;
     overflow:hidden;
+    border-radius: 10px;
   }
 
   img {
     width:100%;
+    border-radius: 10px;
   }
 
   .post-overlay {
@@ -32,6 +35,7 @@
     position: absolute;
     top:20px;
     left:0px;
+    border-radius: 10px;
 
     .post-date {
       position: absolute;
@@ -49,6 +53,7 @@
     position: absolute;
     top:20px;
     left:0px;
+    border-radius: 10px;
 
     .post-date {
       position: absolute;
@@ -73,6 +78,7 @@
 
 
   .post-body {
+    display: none;
     background-color: rgb(251,251,251);
     height:100%;
     margin-bottom: 100px;

@@ -18,5 +18,8 @@ $(document).ready(function(){
 
   zoomIn();
 
+  $('.post-body').slideDown(500);
+
+
 
 });
