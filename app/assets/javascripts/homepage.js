@@ -14,6 +14,7 @@ $(document).ready(function(){
   $('.hero-post-right').fadeIn(500, function(){
   $('.post-body').slideDown(500);
   $('.post-body-quote').slideDown(500);
+  $('#footer-container').fadeIn(100);
     });
   $('.post-card').fadeIn(5000);
 
