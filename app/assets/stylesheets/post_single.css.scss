@@ -18,6 +18,12 @@ a{
     height:400px;
     overflow:hidden;
     border-radius: 10px;
+
+    img {
+    width:100%;
+    border-radius: 10px;
+    }
+
   }
 
   .post-picture-quote{
@@ -27,9 +33,11 @@ a{
   }
 
   img {
-    width:100%;
-    border-radius: 10px;
+    display:block;
+    margin:auto;
   }
+
+
 
   .post-overlay {
     background-color: #000;

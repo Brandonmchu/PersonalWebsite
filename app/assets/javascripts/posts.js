@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-  $bannerImg = $('img');
+  $bannerImg = $('.post-picture img');
 
   function zoomIn(){
     $bannerImg.animate({
