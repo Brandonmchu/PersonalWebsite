@@ -17,6 +17,7 @@ end
 
 def show
   @post = Post.find_by_id(params[:id])
+  @posts = Post.all.sample(3)
   render :layout => 'public'
 end
 
